@@ -1,0 +1,30 @@
+﻿@model MovixApp.Models.Movie
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="container mt-5 text-light">
+    <div class="row">
+        <!-- Film Posteri -->
+        <div class="col-md-4">
+            <img src="@Model.FullPosterPath" class="img-fluid rounded shadow" alt="@Model.Title" />
+        </div>
+
+        <!-- Film Detayları -->
+        <div class="col-md-8">
+            <h2 class="mb-3">@Model.Title</h2>
+
+            <p>
+                <strong>Puan: </strong>
+                <span class="text-warning">⭐ @Model.VoteAverage</span>
+            </p>
+
+            <p>@Model.Overview</p>
+
+            <a asp-controller="Home" asp-action="Index" class="btn btn-secondary mt-3">
+                ← Geri Dön
+            </a>
+        </div>
+    </div>
+</div>

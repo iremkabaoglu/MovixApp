@@ -5,21 +5,21 @@
 }
 
 <h2>Popüler Filmler</h2>
-
-<div style="display:flex; flex-wrap:wrap; gap:20px;">
-    @if (Model != null && Model.Any())
+<div class="row">
+    @foreach (var movie in Model)
     {
-        foreach (var movie in Model)
-        {
-            <div style="width:200px; border:1px solid #ddd; padding:10px; border-radius:5px; background-color:#f9f9f9;">
-                <img src="https://image.tmdb.org/t/p/w200@movie.PosterPath" alt="@movie.Title" style="width:100%; height:auto;" />
-                <h4>@movie.Title</h4>
-                <p>@movie.Overview</p>
+        <div class="col-md-3 mb-4">
+            <div class="card h-100 bg-dark text-white">
+                <img src="@movie.FullPosterPath" class="card-img-top" alt="@movie.Title" />
+                <div class="card-body">
+                    <h5 class="card-title">@movie.Title</h5>
+                    <p class="card-text">
+                        @((movie.Overview?.Length > 100 ? movie.Overview.Substring(0, 100) + "..." : movie.Overview))
+                    </p>
+                    <p>⭐ @movie.VoteAverage</p>
+                    <a href="@Url.Action("Details", "Home", new { id = movie.Id })" class="btn btn-primary">Detaylar</a>
+                </div>
             </div>
-        }
-    }
-    else
-    {
-        <p>Film bulunamadı.</p>
+        </div>
     }
 </div>

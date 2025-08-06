@@ -1,32 +1,79 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using MovixApp.Models;
+using System.Net.Http;
+using System.Text.Json;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace MovixApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly HttpClient _httpClient;
+        private readonly string _apiKey = "b732f83847ff8e725e58e0aeb8e25c02";
+        private readonly string _baseUrl = "https://api.themoviedb.org/3/";
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IHttpClientFactory httpClientFactory)
         {
-            _logger = logger;
+            _httpClient = httpClientFactory.CreateClient();
         }
 
-        public IActionResult Index()
+        // Popüler Filmler
+        public async Task<IActionResult> Index()
         {
-            return View();
+            string apiUrl = $"{_baseUrl}movie/popular?api_key={_apiKey}&language=tr-TR&page=1";
+
+            var response = await _httpClient.GetAsync(apiUrl);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                return Content("API'den veri alýnamadý. Hata kodu: " + response.StatusCode);
+            }
+
+            var json = await response.Content.ReadAsStringAsync();
+
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            };
+
+            var movieResponse = JsonSerializer.Deserialize<MovieResponse>(json, options);
+
+            if (movieResponse == null || movieResponse.Results == null)
+            {
+                return Content("API'den geçerli veri alýnamadý.");
+            }
+
+            return View(movieResponse.Results);
         }
 
-        public IActionResult Privacy()
+        // Film Detay Sayfasý
+        public async Task<IActionResult> Details(int id)
         {
-            return View();
-        }
+            string apiUrl = $"{_baseUrl}movie/{id}?api_key={_apiKey}&language=tr-TR";
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var response = await _httpClient.GetAsync(apiUrl);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                return Content("Detay verisi alýnamadý. Hata kodu: " + response.StatusCode);
+            }
+
+            var json = await response.Content.ReadAsStringAsync();
+
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            };
+
+            var movie = JsonSerializer.Deserialize<Movie>(json, options);
+
+            if (movie == null)
+            {
+                return Content("Film detaylarý bulunamadý.");
+            }
+
+            return View(movie);
         }
     }
 }

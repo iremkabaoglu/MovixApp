@@ -1,27 +1,23 @@
-﻿@model IEnumerable<MovixApp.Models.Movie>
+﻿@model List<MovixApp.Models.Movie>
 
-<h2>Popüler Filmler</h2>
+<h2 style="color:white;">Popüler Filmler</h2>
 
 @if (Model != null && Model.Any())
 {
-    <div class="row">
+    <div style="display:flex; flex-wrap:wrap; gap:20px;">
         @foreach (var movie in Model)
         {
-            <div class="col-md-3 mb-4">
-                <div class="card">
-                    <img src="@("https://image.tmdb.org/t/p/w500" + movie.PosterPath)"
-                         class="card-img-top" alt="@movie.Title" />
-                    <div class="card-body">
-                        <h5 class="card-title">@movie.Title</h5>
-                        <p class="card-text">@movie.Overview</p>
-                        <p><strong>Puan:</strong> @movie.VoteAverage</p>
-                    </div>
-                </div>
+            <div style="width:200px; background:#222; color:white; padding:10px; border-radius:5px;">
+                <img src="https://image.tmdb.org/t/p/w200@movie.PosterPath"
+                     alt="@movie.Title" style="width:100%; border-radius:5px;" />
+                <h4>@movie.Title</h4>
+                <p><strong>Puan:</strong> @movie.VoteAverage</p>
+                <p style="font-size:13px;">@movie.Overview</p>
             </div>
         }
     </div>
 }
 else
 {
-    <p>Film bulunamadı.</p>
+    <p style="color:white;">Film bulunamadı.</p>
 }
