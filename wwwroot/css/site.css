@@ -71,3 +71,22 @@ body {
 .form-check-input:focus {
     box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem var(--main-color);
 }
+.form-control {
+    color: #fff !important;
+    background-color: #222 !important;
+}
+
+    .form-control::placeholder {
+        color: #aaa !important;
+    }
+.dropdown-menu {
+    background-color: #1c1c1c;
+}
+
+    .dropdown-menu .dropdown-item {
+        color: #fff;
+    }
+
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #333;
+        }

@@ -1,0 +1,50 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Kayıt Ol";
+}
+
+<h1 class="text-center text-primary">@ViewData["Title"]</h1>
+
+<div class="row justify-content-center mt-4">
+    <div class="col-md-5">
+        <section class="card shadow-lg p-4">
+            <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                <h4 class="text-center mb-3">Yeni bir hesap oluşturun</h4>
+                <hr />
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3" role="alert"></div>
+
+                <!-- E-posta -->
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Email" class="form-control" type="email"
+                           autocomplete="username" aria-required="true" />
+                    <label asp-for="Input.Email" class="form-label">E-posta</label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+
+                <!-- Şifre -->
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Password" class="form-control" type="password"
+                           autocomplete="current-password" aria-required="true" />
+                    <label asp-for="Input.Password" class="form-label">Şifre</label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+
+                <!-- Şifre Tekrar -->
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.ConfirmPassword" type="password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Şifre tekrar" />
+                    <label asp-for="Input.ConfirmPassword">Şifreyi Onayla</label>
+                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <!-- Kayıt Ol Butonu -->
+                <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-success">Kayıt Ol</button>
+            </form>
+        </section>
+    </div>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

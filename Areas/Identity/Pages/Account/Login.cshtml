@@ -1,0 +1,57 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Giriş Yap";
+}
+
+<h1 class="text-center text-primary">@ViewData["Title"]</h1>
+<div class="row justify-content-center mt-4">
+    <div class="col-md-5">
+        <section class="card shadow-lg p-4">
+            <form id="account" method="post">
+                <h4 class="text-center mb-3">Hesabınıza giriş yapın</h4>
+                <hr />
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3" role="alert"></div>
+
+                <!-- Email -->
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true"  />
+                    <label asp-for="Input.Email" class="form-label">E-posta</label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+
+                <!-- Şifre -->
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Password" type="password" class="form-control" autocomplete="current-password" aria-required="true"  />
+                    <label asp-for="Input.Password" class="form-label">Şifre</label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+
+                <!-- Beni Hatırla -->
+                <div class="form-check mb-3">
+                    <input class="form-check-input" asp-for="Input.RememberMe" />
+                    <label class="form-check-label" asp-for="Input.RememberMe">
+                        Beni Hatırla
+                    </label>
+                </div>
+
+                <!-- Giriş Butonu -->
+                <div>
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Giriş Yap</button>
+                </div>
+
+                <!-- Diğer Seçenekler -->
+                <div class="text-center mt-3">
+                    <p><a id="forgot-password" asp-page="./ForgotPassword">Şifremi unuttum</a></p>
+                    <p><a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Yeni hesap oluştur</a></p>
+                    <p><a id="resend-confirmation" asp-page="./ResendEmailConfirmation">E-posta doğrulama tekrar gönder</a></p>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
