@@ -1,0 +1,73 @@
+:root {
+    --main-color: #d87152;
+    --bg-dark: #121212;
+    --text-light: #ffffff;
+}
+
+/* Genel Ayarlar */
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar-custom {
+    background-color: #000;
+    border-bottom: 1px solid var(--main-color);
+}
+
+    .navbar-custom .nav-link {
+        color: var(--text-light);
+        transition: color 0.3s ease;
+    }
+
+        .navbar-custom .nav-link:hover {
+            color: var(--main-color);
+        }
+
+/* Butonlar */
+.btn-main {
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-main:hover {
+        background-color: #b45739;
+    }
+
+/* Kartlar */
+.card {
+    background-color: #1c1c1c;
+    border: none;
+    color: var(--text-light);
+    transition: transform 0.3s ease;
+}
+
+    .card:hover {
+        transform: scale(1.02);
+    }
+
+/* Form Odaklanma Efekti */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem var(--main-color);
+}
