@@ -3,36 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\source\\repos\\MovixApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|c:\\users\\user\\source\\repos\\movixapp\\views\\movies\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|solutionrelative:views\\movies\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|c:\\users\\user\\source\\repos\\movixapp\\views\\movies\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|solutionrelative:views\\movies\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|c:\\users\\user\\source\\repos\\movixapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|c:\\users\\user\\source\\repos\\movixapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|c:\\users\\user\\source\\repos\\movixapp\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|solutionrelative:views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|c:\\users\\user\\source\\repos\\movixapp\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|c:\\users\\user\\source\\repos\\movixapp\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|solutionrelative:controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|c:\\users\\user\\source\\repos\\movixapp\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|c:\\users\\user\\source\\repos\\movixapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|c:\\users\\user\\source\\repos\\movixapp\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|c:\\users\\user\\source\\repos\\movixapp\\views\\movies\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|solutionrelative:views\\movies\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,106 +34,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MovixApp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MovixApp\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-06T15:32:01.715Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MovixApp\\Views\\Profile\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Profile\\Index.cshtml",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MovixApp\\Views\\Profile\\Index.cshtml",
-              "RelativeToolTip": "Views\\Profile\\Index.cshtml",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAcwAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-06T15:31:25.342Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProfileController.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MovixApp\\Controllers\\ProfileController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProfileController.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MovixApp\\Controllers\\ProfileController.cs",
-              "RelativeToolTip": "Controllers\\ProfileController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T15:30:22.13Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AgIAADcAAAAAAAAAAADwv1wAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-08-06T15:15:14.094Z",
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MovixApp\\Views\\Movies\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Movies\\Details.cshtml",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\MovixApp\\Views\\Movies\\Details.cshtml",
+              "RelativeToolTip": "Views\\Movies\\Details.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAQwEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-15T17:19:14.244Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MovixApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MovixApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAwB8AAAAAAAAAAAAAAA==",
+              "Title": "Search.cshtml",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MovixApp\\Views\\Movies\\Search.cshtml",
+              "RelativeDocumentMoniker": "Views\\Movies\\Search.cshtml",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\MovixApp\\Views\\Movies\\Search.cshtml",
+              "RelativeToolTip": "Views\\Movies\\Search.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-06T15:11:55.715Z",
+              "WhenOpened": "2025-08-15T17:10:45.276Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MovixApp\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MovixApp\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAwBEAAAAwAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MovixApp\\Views\\Movies\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Movies\\Index.cshtml",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\MovixApp\\Views\\Movies\\Index.cshtml",
+              "RelativeToolTip": "Views\\Movies\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-06T15:10:06.291Z",
+              "WhenOpened": "2025-08-15T17:10:18.409Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MovixApp\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MovixApp\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwA8AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T14:45:41.445Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MovixApp\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MovixApp\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T14:44:53.141Z",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MovixApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\MovixApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCoAAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-12T15:03:26.289Z",
               "EditorCaption": ""
             }
           ]

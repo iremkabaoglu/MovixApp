@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\source\\repos\\MovixApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|c:\\users\\user\\source\\repos\\movixapp\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|c:\\users\\user\\source\\repos\\movixapp\\views\\movies\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|solutionrelative:views\\movies\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|c:\\users\\user\\source\\repos\\movixapp\\views\\movies\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|solutionrelative:views\\movies\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|c:\\users\\user\\source\\repos\\movixapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|c:\\users\\user\\source\\repos\\movixapp\\views\\movies\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD36AE6E-82E4-465A-8081-9F07E0B7C78B}|MovixApp.csproj|solutionrelative:views\\movies\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,15 +34,54 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MovixApp\\Views\\Movies\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Movies\\Details.cshtml",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\MovixApp\\Views\\Movies\\Details.cshtml",
+              "RelativeToolTip": "Views\\Movies\\Details.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAQwEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-15T17:19:14.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Search.cshtml",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MovixApp\\Views\\Movies\\Search.cshtml",
+              "RelativeDocumentMoniker": "Views\\Movies\\Search.cshtml",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\MovixApp\\Views\\Movies\\Search.cshtml",
+              "RelativeToolTip": "Views\\Movies\\Search.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-15T17:10:45.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MovixApp\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\MovixApp\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T14:44:53.141Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MovixApp\\Views\\Movies\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Movies\\Index.cshtml",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\MovixApp\\Views\\Movies\\Index.cshtml",
+              "RelativeToolTip": "Views\\Movies\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-15T17:10:18.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\MovixApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\MovixApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCoAAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-12T15:03:26.289Z",
               "EditorCaption": ""
             }
           ]

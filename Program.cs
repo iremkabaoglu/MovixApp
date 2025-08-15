@@ -18,6 +18,10 @@ builder.Services.AddControllersWithViews();
 //  4) HttpClient ekleniyor
 builder.Services.AddHttpClient();
 
+builder.Services.AddHttpClient();
+builder.Services.AddMemoryCache();
+
+
 var app = builder.Build();
 
 // ================== Middlewares =====================
