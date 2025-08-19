@@ -105,3 +105,79 @@ hr {
     border-top: 1px solid #333;
     padding: 12px 0;
 }
+.carousel-inner img {
+    height: 400px;
+    object-fit: cover;
+}
+/* Slider görsel oraný ve kapak efekti */
+.carousel-inner img {
+    height: 420px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    bottom: 1.75rem;
+    text-shadow: 0 2px 12px rgba(0,0,0,.6);
+}
+
+.carousel-item::after { /* alttan hafif gradient */
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0) 60%);
+    pointer-events: none;
+}
+
+/* Bölüm baþlýðý – ince vurgu */
+.section-title {
+    display: inline-block;
+    margin: .25rem 0 1rem;
+    padding-bottom: .3rem;
+    border-bottom: 3px solid #dc3545;
+}
+
+/* Kart hover mikro etkileþim */
+.card {
+    transition: transform .2s ease, box-shadow .2s ease;
+    background: #121212;
+    border: 1px solid #1e1e1e;
+}
+
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 24px rgba(0,0,0,.35);
+    }
+
+    /* Poster ve metin hizalarý */
+    .card img {
+        object-fit: cover;
+        height: 320px;
+    }
+
+    .card .card-body {
+        min-height: 150px;
+    }
+.carousel-caption h3 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.carousel-caption p {
+    font-size: 1.1rem;
+}
+.custom-caption-top {
+    bottom: 35% !important;
+}
+.sticky-sidebar {
+    position: sticky;
+    top: 84px;
+}
+/* navbar altýnda sabit */
+.list-group-item {
+    border-color: #222;
+}
+
+    .list-group-item.active {
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }

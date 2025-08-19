@@ -2,22 +2,105 @@
 @{
     ViewData["Title"] = "Popüler Filmler";
 }
-<h3 class="mb-3">Popüler Filmler</h3>
 
-<div class="row g-4">
-    @foreach (var m in Model)
-    {
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-                <img class="card-img-top"
-                     src="@(string.IsNullOrEmpty(m.PosterPath) ? "" : $"https://image.tmdb.org/t/p/w500{m.PosterPath}")"
-                     alt="@m.Title" onerror="this.style.display='none'" />
-                <div class="card-body">
-                    <h6 class="card-title">@m.Title</h6>
-                    <p class="card-text small text-secondary">⭐ @m.VoteAverage</p>
-                    <a class="btn btn-sm btn-main" asp-controller="Movies" asp-action="Details" asp-route-id="@m.Id">Detaylar</a>
-                </div>
+<!-- SLIDER -->
+<div id="movieCarousel" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="4000">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="3"></button>
+    </div>
+
+    <div class="carousel-inner rounded-3 shadow-lg overflow-hidden">
+        <div class="carousel-item active">
+            <img src="~/images/1.jpg" class="d-block w-100" alt="">
+            <div class="carousel-caption custom-caption-top text-start">
+                <h3 class="mb-2">Bu Hafta Öne Çıkanlar</h3>
+                <p class="mb-3">Yeni fragmanlar ve listeler burada.</p>
+                <a asp-controller="Movies" asp-action="Index" class="btn btn-sm btn-danger">Keşfet</a>
             </div>
         </div>
-    }
+        <div class="carousel-item">
+            <img src="~/images/2.jpg" class="d-block w-100" alt="">
+            <div class="carousel-caption">
+                <h3>Bilim Kurgu Kuşağı</h3>
+                <p>Uzak galaksiler, yakın tehlikeler.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/3.jpg" class="d-block w-100" alt="">
+            <div class="carousel-caption text-end">
+                <h3>Aksiyon Zamanı</h3>
+                <p>Adrenalin yüksek olsun.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/4.jpg" class="d-block w-100" alt="">
+            <div class="carousel-caption">
+                <h3>Kült Klasikler</h3>
+                <p>Tekrar tekrar izlenecekler.</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#movieCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<!-- İKİ SÜTUN: SOL MENÜ + İÇERİK -->
+<div class="row g-4 mt-1">
+    <aside class="col-12 col-lg-3">
+        <button class="btn btn-outline-light d-lg-none mb-3" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#genresCanvas">
+            Kategoriler
+        </button>
+
+        <div class="d-none d-lg-block sticky-sidebar">
+            @await Html.PartialAsync("_SidebarGenres")
+        </div>
+
+        <div class="offcanvas offcanvas-start bg-dark text-light" tabindex="-1" id="genresCanvas">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">Kategoriler</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                @await Html.PartialAsync("_SidebarGenres")
+            </div>
+        </div>
+    </aside>
+
+    <section class="col-12 col-lg-9">
+        <h3 class="section-title">Popüler Filmler</h3>
+        <div class="row">
+            @foreach (var movie in Model)
+            {
+                <div class="col-sm-6 col-md-6 col-xl-4 mb-4">
+                    <div class="card h-100 bg-black text-light border-0 shadow-sm">
+                        @{
+                            var poster = string.IsNullOrEmpty(movie.PosterPath)
+                            ? Url.Content("~/images/no-poster.png")
+                            : $"https://image.tmdb.org/t/p/w500{movie.PosterPath}";
+                        }
+                        <img src="@poster" class="card-img-top" alt="@movie.Title" style="object-fit:cover;height:320px;" />
+                        <div class="card-body">
+                            <h6 class="card-title mb-1">@movie.Title</h6>
+                            <p class="small text-secondary mb-2">
+                                @((movie.Overview ?? "").Length > 120 ? movie.Overview.Substring(0, 120) + "..." : movie.Overview)
+                            </p>
+                            <div class="small">⭐ @movie.VoteAverage</div>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a class="btn btn-sm btn-primary" asp-action="Details" asp-route-id="@movie.Id">Detaylar</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
 </div>

@@ -1,16 +1,16 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/MovixApp/css/site.7ij5yull3a.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"7ij5yull3a"},{"Name":"integrity","Value":"sha256-/xsdDoEc8EgCwIHtApaFpF74BtlQsQLWgVWcZY6PmzM="},{"Name":"label","Value":"_content/MovixApp/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3492"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022/xsdDoEc8EgCwIHtApaFpF74BtlQsQLWgVWcZY6PmzM=\u0022"},{"Name":"Last-Modified","Value":"Tue, 19 Aug 2025 16:55:19 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MovixApp/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-TdoQc/KPXiPRYPTLdT0n0n4ik\u002B1ZnPWqiDHEFgC0TyY="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1936"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022TdoQc/KPXiPRYPTLdT0n0n4ik\u002B1ZnPWqiDHEFgC0TyY=\u0022"},{"Name":"Last-Modified","Value":"Fri, 15 Aug 2025 16:55:13 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/MovixApp/css/site.jogdo6mhh8.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jogdo6mhh8"},{"Name":"integrity","Value":"sha256-TdoQc/KPXiPRYPTLdT0n0n4ik\u002B1ZnPWqiDHEFgC0TyY="},{"Name":"label","Value":"_content/MovixApp/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1936"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022TdoQc/KPXiPRYPTLdT0n0n4ik\u002B1ZnPWqiDHEFgC0TyY=\u0022"},{"Name":"Last-Modified","Value":"Fri, 15 Aug 2025 16:55:13 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-/xsdDoEc8EgCwIHtApaFpF74BtlQsQLWgVWcZY6PmzM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3492"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022/xsdDoEc8EgCwIHtApaFpF74BtlQsQLWgVWcZY6PmzM=\u0022"},{"Name":"Last-Modified","Value":"Tue, 19 Aug 2025 16:55:19 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MovixApp/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
@@ -23,6 +23,54 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5430"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\u0022"},{"Name":"Last-Modified","Value":"Sun, 03 Aug 2025 19:03:08 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MovixApp/images/1.hk6dkmpnc8.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"hk6dkmpnc8"},{"Name":"integrity","Value":"sha256-f6H/qC\u002BiTlWqRgwo6q2CQcTvFyzrU31\u002By/5PZuNvgGU="},{"Name":"label","Value":"_content/MovixApp/images/1.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"34322"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022f6H/qC\u002BiTlWqRgwo6q2CQcTvFyzrU31\u002By/5PZuNvgGU=\u0022"},{"Name":"Last-Modified","Value":"Tue, 19 Aug 2025 16:02:52 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MovixApp/images/1.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\1.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-f6H/qC\u002BiTlWqRgwo6q2CQcTvFyzrU31\u002By/5PZuNvgGU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"34322"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022f6H/qC\u002BiTlWqRgwo6q2CQcTvFyzrU31\u002By/5PZuNvgGU=\u0022"},{"Name":"Last-Modified","Value":"Tue, 19 Aug 2025 16:02:52 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MovixApp/images/2.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\2.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-QYuX\u002BTyTdSuesWXS3JAWb6dKHfZgArZjS3aKUdCQ4Fg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"95414"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022QYuX\u002BTyTdSuesWXS3JAWb6dKHfZgArZjS3aKUdCQ4Fg=\u0022"},{"Name":"Last-Modified","Value":"Tue, 19 Aug 2025 16:10:30 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MovixApp/images/2.rd9xvy0m3o.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\2.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"rd9xvy0m3o"},{"Name":"integrity","Value":"sha256-QYuX\u002BTyTdSuesWXS3JAWb6dKHfZgArZjS3aKUdCQ4Fg="},{"Name":"label","Value":"_content/MovixApp/images/2.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"95414"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022QYuX\u002BTyTdSuesWXS3JAWb6dKHfZgArZjS3aKUdCQ4Fg=\u0022"},{"Name":"Last-Modified","Value":"Tue, 19 Aug 2025 16:10:30 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MovixApp/images/3.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\3.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-oPRwJ3MTc6WRlmwp4UqrY7fBZrP6J4tIA2YbEDtUoaw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"117703"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022oPRwJ3MTc6WRlmwp4UqrY7fBZrP6J4tIA2YbEDtUoaw=\u0022"},{"Name":"Last-Modified","Value":"Tue, 19 Aug 2025 16:09:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MovixApp/images/3.oe5cl0njfh.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\3.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"oe5cl0njfh"},{"Name":"integrity","Value":"sha256-oPRwJ3MTc6WRlmwp4UqrY7fBZrP6J4tIA2YbEDtUoaw="},{"Name":"label","Value":"_content/MovixApp/images/3.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"117703"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022oPRwJ3MTc6WRlmwp4UqrY7fBZrP6J4tIA2YbEDtUoaw=\u0022"},{"Name":"Last-Modified","Value":"Tue, 19 Aug 2025 16:09:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MovixApp/images/4.2fxh143ksw.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\4.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"2fxh143ksw"},{"Name":"integrity","Value":"sha256-kts4fUWlW/H520zcx29CZCvs7rBb0U3SjlhSiRAuEdU="},{"Name":"label","Value":"_content/MovixApp/images/4.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"526941"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022kts4fUWlW/H520zcx29CZCvs7rBb0U3SjlhSiRAuEdU=\u0022"},{"Name":"Last-Modified","Value":"Tue, 19 Aug 2025 16:10:34 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MovixApp/images/4.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\4.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-kts4fUWlW/H520zcx29CZCvs7rBb0U3SjlhSiRAuEdU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"526941"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022kts4fUWlW/H520zcx29CZCvs7rBb0U3SjlhSiRAuEdU=\u0022"},{"Name":"Last-Modified","Value":"Tue, 19 Aug 2025 16:10:34 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MovixApp/js/site.gul99vqv31.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>

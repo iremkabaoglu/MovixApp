@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EmHC76H6DjdIof5l+UWKTYVNAS1BM784vmu3KkhAzXI=",
+  "Hash": "48BQadoLwmqkxCUyc0peMalkEvcB2dyEqBkehFNSRVY=",
   "Source": "MovixApp",
   "BasePath": "_content/MovixApp",
   "Mode": "Default",
@@ -2201,12 +2201,12 @@
       "OriginalItemSpec": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\USER\\source\\repos\\MovixApp\\obj\\Debug\\net9.0\\compressed\\femu52uehb-jogdo6mhh8.gz",
+      "Identity": "C:\\Users\\USER\\source\\repos\\MovixApp\\obj\\Debug\\net9.0\\compressed\\femu52uehb-7ij5yull3a.gz",
       "SourceId": "MovixApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\USER\\source\\repos\\MovixApp\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/MovixApp",
-      "RelativePath": "css/site#[.{fingerprint=jogdo6mhh8}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=7ij5yull3a}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -2215,8 +2215,8 @@
       "RelatedAsset": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "gybn9zn5d3",
-      "Integrity": "uJ6Ji2fA8rrq1/2SD2PBONAM0y7CyC2aDTljorGLAsk=",
+      "Fingerprint": "52kvjzgbl1",
+      "Integrity": "TZa4lgN+1cliQTfEMN9vpjg1AjTebFzD4PFAeWzsRKM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\css\\site.css"
@@ -4042,8 +4042,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "jogdo6mhh8",
-      "Integrity": "TdoQc/KPXiPRYPTLdT0n0n4ik+1ZnPWqiDHEFgC0TyY=",
+      "Fingerprint": "7ij5yull3a",
+      "Integrity": "/xsdDoEc8EgCwIHtApaFpF74BtlQsQLWgVWcZY6PmzM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -4068,6 +4068,90 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\images\\1.jpg",
+      "SourceId": "MovixApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\",
+      "BasePath": "_content/MovixApp",
+      "RelativePath": "images/1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hk6dkmpnc8",
+      "Integrity": "f6H/qC+iTlWqRgwo6q2CQcTvFyzrU31+y/5PZuNvgGU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\images\\2.jpg",
+      "SourceId": "MovixApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\",
+      "BasePath": "_content/MovixApp",
+      "RelativePath": "images/2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rd9xvy0m3o",
+      "Integrity": "QYuX+TyTdSuesWXS3JAWb6dKHfZgArZjS3aKUdCQ4Fg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\images\\3.jpg",
+      "SourceId": "MovixApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\",
+      "BasePath": "_content/MovixApp",
+      "RelativePath": "images/3#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "oe5cl0njfh",
+      "Integrity": "oPRwJ3MTc6WRlmwp4UqrY7fBZrP6J4tIA2YbEDtUoaw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\images\\4.jpg",
+      "SourceId": "MovixApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\",
+      "BasePath": "_content/MovixApp",
+      "RelativePath": "images/4#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2fxh143ksw",
+      "Integrity": "kts4fUWlW/H520zcx29CZCvs7rBb0U3SjlhSiRAuEdU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\4.jpg"
     },
     {
       "Identity": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\js\\site.js",
@@ -5353,13 +5437,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.css",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\MovixApp\\obj\\Debug\\net9.0\\compressed\\femu52uehb-jogdo6mhh8.gz",
+      "Route": "css/site.7ij5yull3a.css",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\MovixApp\\obj\\Debug\\net9.0\\compressed\\femu52uehb-7ij5yull3a.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001418439716"
+          "Quality": "0.000810372771"
         }
       ],
       "ResponseHeaders": [
@@ -5369,19 +5453,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "704"
+          "Value": "1233"
         },
         {
           "Name": "ETag",
-          "Value": "\"uJ6Ji2fA8rrq1/2SD2PBONAM0y7CyC2aDTljorGLAsk=\""
+          "Value": "\"TZa4lgN+1cliQTfEMN9vpjg1AjTebFzD4PFAeWzsRKM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 15 Aug 2025 16:55:13 GMT"
+          "Value": "Tue, 19 Aug 2025 16:55:19 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         },
         {
           "Name": "Content-Encoding",
@@ -5397,18 +5481,26 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"TdoQc/KPXiPRYPTLdT0n0n4ik+1ZnPWqiDHEFgC0TyY=\""
+          "Value": "W/\"/xsdDoEc8EgCwIHtApaFpF74BtlQsQLWgVWcZY6PmzM=\""
         }
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "7ij5yull3a"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-TdoQc/KPXiPRYPTLdT0n0n4ik+1ZnPWqiDHEFgC0TyY="
+          "Value": "sha256-/xsdDoEc8EgCwIHtApaFpF74BtlQsQLWgVWcZY6PmzM="
         }
       ]
     },
     {
-      "Route": "css/site.css",
+      "Route": "css/site.7ij5yull3a.css",
       "AssetFile": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -5418,7 +5510,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1936"
+          "Value": "3492"
         },
         {
           "Name": "Content-Type",
@@ -5426,121 +5518,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"TdoQc/KPXiPRYPTLdT0n0n4ik+1ZnPWqiDHEFgC0TyY=\""
+          "Value": "\"/xsdDoEc8EgCwIHtApaFpF74BtlQsQLWgVWcZY6PmzM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 15 Aug 2025 16:55:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-TdoQc/KPXiPRYPTLdT0n0n4ik+1ZnPWqiDHEFgC0TyY="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css.gz",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\MovixApp\\obj\\Debug\\net9.0\\compressed\\femu52uehb-jogdo6mhh8.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "704"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"uJ6Ji2fA8rrq1/2SD2PBONAM0y7CyC2aDTljorGLAsk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 15 Aug 2025 16:55:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-uJ6Ji2fA8rrq1/2SD2PBONAM0y7CyC2aDTljorGLAsk="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.jogdo6mhh8.css",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\MovixApp\\obj\\Debug\\net9.0\\compressed\\femu52uehb-jogdo6mhh8.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.001418439716"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "704"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"uJ6Ji2fA8rrq1/2SD2PBONAM0y7CyC2aDTljorGLAsk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 15 Aug 2025 16:55:13 GMT"
+          "Value": "Tue, 19 Aug 2025 16:55:19 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"TdoQc/KPXiPRYPTLdT0n0n4ik+1ZnPWqiDHEFgC0TyY=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jogdo6mhh8"
+          "Value": "7ij5yull3a"
         },
         {
           "Name": "label",
@@ -5548,13 +5540,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-TdoQc/KPXiPRYPTLdT0n0n4ik+1ZnPWqiDHEFgC0TyY="
+          "Value": "sha256-/xsdDoEc8EgCwIHtApaFpF74BtlQsQLWgVWcZY6PmzM="
         }
       ]
     },
     {
-      "Route": "css/site.jogdo6mhh8.css",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\css\\site.css",
+      "Route": "css/site.7ij5yull3a.css.gz",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\MovixApp\\obj\\Debug\\net9.0\\compressed\\femu52uehb-7ij5yull3a.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5563,7 +5555,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1936"
+          "Value": "1233"
         },
         {
           "Name": "Content-Type",
@@ -5571,56 +5563,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"TdoQc/KPXiPRYPTLdT0n0n4ik+1ZnPWqiDHEFgC0TyY=\""
+          "Value": "\"TZa4lgN+1cliQTfEMN9vpjg1AjTebFzD4PFAeWzsRKM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 15 Aug 2025 16:55:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "jogdo6mhh8"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-TdoQc/KPXiPRYPTLdT0n0n4ik+1ZnPWqiDHEFgC0TyY="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.jogdo6mhh8.css.gz",
-      "AssetFile": "C:\\Users\\USER\\source\\repos\\MovixApp\\obj\\Debug\\net9.0\\compressed\\femu52uehb-jogdo6mhh8.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "704"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"uJ6Ji2fA8rrq1/2SD2PBONAM0y7CyC2aDTljorGLAsk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 15 Aug 2025 16:55:13 GMT"
+          "Value": "Tue, 19 Aug 2025 16:55:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5638,7 +5585,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jogdo6mhh8"
+          "Value": "7ij5yull3a"
         },
         {
           "Name": "label",
@@ -5646,7 +5593,144 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-uJ6Ji2fA8rrq1/2SD2PBONAM0y7CyC2aDTljorGLAsk="
+          "Value": "sha256-TZa4lgN+1cliQTfEMN9vpjg1AjTebFzD4PFAeWzsRKM="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\MovixApp\\obj\\Debug\\net9.0\\compressed\\femu52uehb-7ij5yull3a.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000810372771"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1233"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TZa4lgN+1cliQTfEMN9vpjg1AjTebFzD4PFAeWzsRKM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 19 Aug 2025 16:55:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"/xsdDoEc8EgCwIHtApaFpF74BtlQsQLWgVWcZY6PmzM=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/xsdDoEc8EgCwIHtApaFpF74BtlQsQLWgVWcZY6PmzM="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3492"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/xsdDoEc8EgCwIHtApaFpF74BtlQsQLWgVWcZY6PmzM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 19 Aug 2025 16:55:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/xsdDoEc8EgCwIHtApaFpF74BtlQsQLWgVWcZY6PmzM="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css.gz",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\MovixApp\\obj\\Debug\\net9.0\\compressed\\femu52uehb-7ij5yull3a.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1233"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TZa4lgN+1cliQTfEMN9vpjg1AjTebFzD4PFAeWzsRKM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 19 Aug 2025 16:55:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TZa4lgN+1cliQTfEMN9vpjg1AjTebFzD4PFAeWzsRKM="
         }
       ]
     },
@@ -14476,6 +14560,334 @@
         {
           "Name": "integrity",
           "Value": "sha256-1HkjQSVuV0/ji/X/lGeDTHeagBS0BwopMrHDQuwqgtU="
+        }
+      ]
+    },
+    {
+      "Route": "images/1.hk6dkmpnc8.jpg",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\images\\1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34322"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"f6H/qC+iTlWqRgwo6q2CQcTvFyzrU31+y/5PZuNvgGU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 19 Aug 2025 16:02:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hk6dkmpnc8"
+        },
+        {
+          "Name": "label",
+          "Value": "images/1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-f6H/qC+iTlWqRgwo6q2CQcTvFyzrU31+y/5PZuNvgGU="
+        }
+      ]
+    },
+    {
+      "Route": "images/1.jpg",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\images\\1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34322"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"f6H/qC+iTlWqRgwo6q2CQcTvFyzrU31+y/5PZuNvgGU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 19 Aug 2025 16:02:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-f6H/qC+iTlWqRgwo6q2CQcTvFyzrU31+y/5PZuNvgGU="
+        }
+      ]
+    },
+    {
+      "Route": "images/2.jpg",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\images\\2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "95414"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QYuX+TyTdSuesWXS3JAWb6dKHfZgArZjS3aKUdCQ4Fg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 19 Aug 2025 16:10:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QYuX+TyTdSuesWXS3JAWb6dKHfZgArZjS3aKUdCQ4Fg="
+        }
+      ]
+    },
+    {
+      "Route": "images/2.rd9xvy0m3o.jpg",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\images\\2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "95414"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QYuX+TyTdSuesWXS3JAWb6dKHfZgArZjS3aKUdCQ4Fg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 19 Aug 2025 16:10:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rd9xvy0m3o"
+        },
+        {
+          "Name": "label",
+          "Value": "images/2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QYuX+TyTdSuesWXS3JAWb6dKHfZgArZjS3aKUdCQ4Fg="
+        }
+      ]
+    },
+    {
+      "Route": "images/3.jpg",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\images\\3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "117703"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oPRwJ3MTc6WRlmwp4UqrY7fBZrP6J4tIA2YbEDtUoaw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 19 Aug 2025 16:09:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oPRwJ3MTc6WRlmwp4UqrY7fBZrP6J4tIA2YbEDtUoaw="
+        }
+      ]
+    },
+    {
+      "Route": "images/3.oe5cl0njfh.jpg",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\images\\3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "117703"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oPRwJ3MTc6WRlmwp4UqrY7fBZrP6J4tIA2YbEDtUoaw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 19 Aug 2025 16:09:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "oe5cl0njfh"
+        },
+        {
+          "Name": "label",
+          "Value": "images/3.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oPRwJ3MTc6WRlmwp4UqrY7fBZrP6J4tIA2YbEDtUoaw="
+        }
+      ]
+    },
+    {
+      "Route": "images/4.2fxh143ksw.jpg",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\images\\4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "526941"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kts4fUWlW/H520zcx29CZCvs7rBb0U3SjlhSiRAuEdU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 19 Aug 2025 16:10:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2fxh143ksw"
+        },
+        {
+          "Name": "label",
+          "Value": "images/4.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kts4fUWlW/H520zcx29CZCvs7rBb0U3SjlhSiRAuEdU="
+        }
+      ]
+    },
+    {
+      "Route": "images/4.jpg",
+      "AssetFile": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\images\\4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "526941"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kts4fUWlW/H520zcx29CZCvs7rBb0U3SjlhSiRAuEdU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 19 Aug 2025 16:10:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kts4fUWlW/H520zcx29CZCvs7rBb0U3SjlhSiRAuEdU="
         }
       ]
     },
