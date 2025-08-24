@@ -1,7 +1,15 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
+@{
+    // Bu bayrağı sidebar göstermek istediğin sayfalarda controller'dan set et:
+    // ViewBag.ShowSidebar = true;
+    var showSidebar = (ViewBag.ShowSidebar as bool?) ?? false;
 
+    // Aktif menü vurgusu için route bilgileri
+    var ctrl = (string?)ViewContext.RouteData.Values["controller"] ?? "";
+    var act = (string?)ViewContext.RouteData.Values["action"] ?? "";
+}
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -10,50 +18,50 @@
     <title>@ViewData["Title"] - MovixApp</title>
 
     <!-- Bootstrap + Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
-    <!-- Uygulama stilleri -->
+    <!-- App CSS -->
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
-<body class="bg-dark text-light">
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark border-bottom border-danger" style="background:#0f0f0f;">
-        <div class="container">
-            <a class="navbar-brand text-danger fw-bold fs-3" asp-controller="Movies" asp-action="Index">Movix</a>
+<body class="app-shell bg-dark text-light @(showSidebar ? "has-sidebar-rail" : "")">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü Aç/Kapat">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <!-- NAVBAR (sticky) -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container-fluid">
+            <div class="row w-100">
+                <div class="col-2 d-flex align-items-center">
+            <!-- SOL: LOGO -->
+            <a class="navbar-brand d-flex align-items-center" asp-controller="Movies" asp-action="Index" aria-label="Movix">
+                <!-- Logonun dosya adı sende farklıysa yolu güncelle -->
+                <img src="~/images/logo.png" alt="Movix" class="logo-img me-2" />
+                <span class="fw-bold d-none d-sm-inline">Movix</span>
+            </a>
+            </div>
+                    <div class="col-6 d-flex justify-content-center">
 
-            <!-- Arama -->
-            <form class="d-none d-lg-flex ms-3 me-auto position-relative"
-                  method="get" asp-controller="Movies" asp-action="Search"
-                  role="search" autocomplete="off">
-                <input id="navSearch" name="q"
-                       class="form-control form-control-sm bg-transparent text-light"
+            <!-- ORTA: ARAMA (desktop) -->
+            <form class="nav-search mx-auto d-none d-lg-flex" method="get"
+                  asp-controller="Movies" asp-action="Search" role="search" autocomplete="off">
+                <input id="navSearch" name="q" class="form-control form-control-sm"
                        type="search" placeholder="Film ara..." aria-label="Ara" />
-                <button class="btn btn-sm btn-outline-danger ms-2">Ara</button>
+                <button class="btn btn-sm btn-outline-danger" type="submit">Ara</button>
 
                 <!-- Canlı öneri kutusu -->
                 <div id="navSuggest"
                      class="position-absolute rounded shadow bg-dark border border-secondary mt-5 d-none"
-                     style="z-index:1000; min-width: 260px; max-height: 360px; overflow:auto;">
-                </div>
+                     style="z-index:1000; min-width: 260px; max-height: 360px; overflow:auto;"></div>
             </form>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Movies" asp-action="Index">Anasayfa</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Movies" asp-action="Index">Filmler</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Blog" asp-action="Index">Haberler</a>
-                    </li>
+            </div>
+                        <div class="col-4 d-flex justify-content-end">
+            <!-- SAĞ: Menü + Auth -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            </div>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navMain">
+                <ul class="navbar-nav align-items-lg-center nav-underline">
 
                     @if (SignInManager.IsSignedIn(User))
                     {
@@ -63,9 +71,9 @@
                         ? username.Split('@')[0] : username;
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-light d-flex align-items-center"
-                               href="#" id="userMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-person-circle me-1"></i>@shortName
+                            <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#"
+                               id="userMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-person-circle"></i> @shortName
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li><a class="dropdown-item" asp-controller="Profile" asp-action="Index">Profil</a></li>
@@ -81,21 +89,35 @@
                     }
                     else
                     {
-                        <li class="nav-item"><a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Giriş Yap</a></li>
-                        <li class="nav-item"><a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Kayıt Ol</a></li>
+                        <li class="nav-item"><a class="btn btn-sm btn-outline-light ms-lg-2" asp-area="Identity" asp-page="/Account/Login">Giriş Yap</a></li>
+                        <li class="nav-item"><a class="btn btn-sm btn-main ms-lg-2" asp-area="Identity" asp-page="/Account/Register">Kayıt Ol</a></li>
                     }
                 </ul>
+
+                <!-- MOBİL: Arama -->
+                <form class="d-flex d-lg-none mt-2" method="get" asp-controller="Movies" asp-action="Search" role="search">
+                    <input class="form-control form-control-sm me-2" name="q" type="search" placeholder="Film ara..." />
+                    <button class="btn btn-sm btn-outline-danger" type="submit">Ara</button>
+                </form>
             </div>
         </div>
     </nav>
 
-    <!-- İÇERİK -->
-    <main class="container py-4">
+    <!-- SOL MENÜ (lg+): sabit değil, sayfayla kayar -->
+    @if (showSidebar)
+    {
+        <aside class="sidebar-rail d-none d-lg-block">
+            @await Html.PartialAsync("_SidebarGenres")
+        </aside>
+    }
+
+    <!-- ANA İÇERİK -->
+    <main class="content-wrap container-fluid px-3 px-lg-4 py-4 flex-fill">
         @RenderBody()
     </main>
 
     <!-- FOOTER -->
-    <footer class="py-3 border-top border-secondary" style="background:#0f0f0f;">
+    <footer class="app-footer py-3 border-top border-secondary">
         <div class="container d-flex justify-content-between align-items-center small text-secondary">
             <span>&copy; @DateTime.Now.Year - MovixApp</span>
             <a class="link-light text-decoration-none" asp-controller="Home" asp-action="Privacy">Gizlilik</a>
@@ -105,53 +127,48 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Canlı öneri (opsiyonel) -->
     <script>
+        // Navbar shrink
+        (function () {
+            const nav = document.querySelector('.navbar-custom');
+            const onScroll = () => nav && (window.scrollY > 10 ? nav.classList.add('navbar-shrink')
+                                                               : nav.classList.remove('navbar-shrink'));
+            onScroll(); window.addEventListener('scroll', onScroll);
+        })();
+
+        // Canlı arama önerisi
         (function () {
             const input = document.getElementById('navSearch');
             const box = document.getElementById('navSuggest');
             if (!input || !box) return;
 
             let timer = null;
-
             input.addEventListener('input', () => {
                 const q = input.value.trim();
                 clearTimeout(timer);
 
-                if (q.length < 2) {
-                    box.classList.add('d-none'); box.innerHTML = '';
-                    return;
-                }
+                if (q.length < 2) { box.classList.add('d-none'); box.innerHTML = ''; return; }
 
                 timer = setTimeout(async () => {
                     try {
                         const res = await fetch(`/api/search/suggest?q=${encodeURIComponent(q)}`);
                         const items = await res.json();
-
-                        if (!items || items.length === 0) {
-                            box.classList.add('d-none'); box.innerHTML = '';
-                            return;
-                        }
+                        if (!items || items.length === 0) { box.classList.add('d-none'); box.innerHTML = ''; return; }
 
                         box.innerHTML = items.map(m => `
-                            <a href="/Movies/Details/${m.id}"
-                               class="d-flex align-items-center p-2 text-decoration-none text-light border-bottom border-secondary">
-                                ${m.poster ? `<img src="${m.poster}" class="me-2 rounded" width="32" height="48" />` : ''}
-                                <span>${m.title}</span>
-                            </a>
+                          <a href="/Movies/Details/${m.id}"
+                             class="d-flex align-items-center p-2 text-decoration-none text-light border-bottom border-secondary">
+                             ${m.poster ? `<img src="${m.poster}" class="me-2 rounded" width="32" height="48" />` : ''}
+                             <span>${m.title}</span>
+                          </a>
                         `).join('');
                         box.classList.remove('d-none');
-                    } catch {
-                        box.classList.add('d-none'); box.innerHTML = '';
-                    }
+                    } catch { box.classList.add('d-none'); box.innerHTML = ''; }
                 }, 200);
             });
 
-            // kutunun dışına tıklanınca kapat
             document.addEventListener('click', (e) => {
-                if (!box.contains(e.target) && e.target !== input) {
-                    box.classList.add('d-none');
-                }
+                if (!box.contains(e.target) && e.target !== input) box.classList.add('d-none');
             });
         })();
     </script>

@@ -3,17 +3,17 @@
     var title = Model?.Title ?? "Film";
     ViewData["Title"] = title;
 
-    // Poster url'si (yoksa null)
-    string poster = !string.IsNullOrWhiteSpace(Model?.PosterPath)
-        ? $"https://image.tmdb.org/t/p/w780{Model.PosterPath}"
+    string? poster = !string.IsNullOrWhiteSpace(Model?.PosterPath)
+        ? $"https://image.tmdb.org/t/p/w780{Model!.PosterPath}"
         : null;
 }
 
-<div class="container">
+<div class="content-inner">
+    @* ÖNEMLİ: container yerine bu *@
     <div class="row g-4 align-items-start">
 
         <!-- POSTER -->
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-5 col-lg-4">
             @if (!string.IsNullOrEmpty(poster))
             {
                 <img src="@poster"
@@ -31,7 +31,7 @@
         </div>
 
         <!-- BİLGİLER -->
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-md-7 col-lg-8">
             <h2 class="mb-2">@title</h2>
 
             <div class="d-flex align-items-center mb-3">
@@ -40,10 +40,10 @@
                 <span class="text-secondary ms-2">(TMDB)</span>
             </div>
 
-            <div class="card">
+            <div class="card bg-black border-0 shadow-sm mb-3">
                 <div class="card-body">
                     <h6 class="text-secondary mb-2">Özet</h6>
-                    <p class="mb-0">
+                    <p class="movie-summary mb-0">
                         @(string.IsNullOrWhiteSpace(Model?.Overview)
                             ? "Bu film için özet bilgisi bulunamadı."
                             : Model!.Overview)
@@ -51,16 +51,14 @@
                 </div>
             </div>
 
-            <div class="mt-4 d-flex flex-wrap gap-2">
-                <a asp-controller="Movies" asp-action="Index" class="btn btn-outline-light">
+            <div class="d-flex flex-wrap gap-2">
+                <a asp-controller="Movies" asp-action="Index" class="btn btn-outline-light btn-sm">
                     ← Listeye Dön
                 </a>
-
-                <!-- Favori/İzledim butonları (ileride Identity + DB ile bağlayacağız) -->
-                <button type="button" class="btn btn-main" disabled title="Yakında">
+                <button type="button" class="btn btn-main btn-sm" disabled title="Yakında">
                     ❤️ Favorilere Ekle
                 </button>
-                <button type="button" class="btn btn-outline-light" disabled title="Yakında">
+                <button type="button" class="btn btn-outline-light btn-sm" disabled title="Yakında">
                     ✔️ İzledim
                 </button>
             </div>
@@ -70,6 +68,6 @@
 
 @section Scripts {
     <script>
-        // ileride trailer/oyuncular bölümünü dinamik yüklemek istersen burada kullanırız
+        // gerekirse ileride trailer/oyuncular yükleme
     </script>
 }

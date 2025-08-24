@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\images\\4.jpg"
     },
     {
+      "Id": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
       "Id": "C:\\Users\\USER\\source\\repos\\MovixApp\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

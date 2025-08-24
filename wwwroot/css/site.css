@@ -2,28 +2,40 @@
     --main-color: #d87152;
     --bg-dark: #121212;
     --text-light: #ffffff;
+    --nav-h: 72px; /* navbar yüksekliði */
+    --sidebar-w: 240px; /* sidebar geniþliði */
+    --rail-gap-y: 10px; /* navbar-sidebar dikey boþluk */
+    --rail-gap-x: 16px; /* sidebar-content yatay boþluk */
 }
 
-/* Sayfa iskeleti: footer her zaman altta, arkaplan tam siyah */
+/* ====== Temel iskelet ====== */
 html, body {
     height: 100%;
 }
 
-    body.app-shell {
-        min-height: 100%;
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        background-color: var(--bg-dark) !important;
-        color: var(--text-light);
-    }
+body {
+    margin: 0;
+    background: var(--bg-dark);
+    color: var(--text-light);
+    position: relative;
+}
 
-/* Ýçerik alaný esnesin */
+.app-shell {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .flex-fill {
     flex: 1 0 auto;
 }
 
-/* Genel resetler */
+.app-footer {
+    margin-top: auto;
+    background: #000;
+}
+
+/* Reset */
 .container, .container-fluid, main, section, .card {
     background: transparent !important;
 }
@@ -40,76 +52,103 @@ hr {
     border-color: #333;
 }
 
-/* Kartlar */
-.card {
-    background: #1c1c1c;
-    border: none;
-    color: #fff;
-    transition: transform .3s ease;
-}
-
-    .card:hover {
-        transform: scale(1.02);
-    }
-
-/* Navbar (koyu + yapýþkan) */
+/* ====== Navbar ====== */
 .navbar-custom {
-    background: #000;
-    border-bottom: 1px solid var(--main-color);
-    position: sticky;
-    top: 0;
-    z-index: 1030;
+    background: #0f0f0f;
+    border-bottom: 1px solid rgba(216,113,82,.45);
+    transition: padding .2s ease, background .2s ease, box-shadow .2s ease;
+    padding-block: .55rem;
+    margin-bottom: 0 !important;
 }
 
-    .navbar-custom .navbar-brand {
-        color: var(--main-color);
-        letter-spacing: .3px;
+    .navbar-custom.navbar-shrink {
+        padding-block: .35rem;
+        box-shadow: 0 6px 18px rgba(0,0,0,.25);
     }
 
     .navbar-custom .nav-link {
-        color: #fff;
-        padding: .5rem .9rem;
+        color: #e7e7e7;
+        opacity: .9;
+        position: relative;
+        padding: .5rem .8rem;
     }
 
         .navbar-custom .nav-link:hover {
             color: var(--main-color);
+            opacity: 1;
         }
 
-/* Dropdown */
-.dropdown-menu {
-    background: #1c1c1c;
+.nav-underline .nav-link::after {
+    content: "";
+    position: absolute;
+    left: .6rem;
+    right: .6rem;
+    bottom: .2rem;
+    height: 2px;
+    background: transparent;
+    border-radius: 2px;
+    transition: background .2s,width .2s;
 }
 
-    .dropdown-menu .dropdown-item {
+.nav-underline .nav-link:hover::after {
+    background: rgba(216,113,82,.6);
+}
+
+.nav-underline .nav-link.active {
+    color: var(--main-color);
+}
+
+    .nav-underline .nav-link.active::after {
+        background: var(--main-color);
+    }
+
+/* Logo (büyük ve sola) */
+.logo-img {
+    height: 56px;
+    width: auto;
+    display: block;
+}
+
+/* Arama (ortada uzun) */
+.nav-search {
+    position: relative;
+    align-items: center;
+    gap: .5rem;
+    flex: 1;
+    margin-left: 100px;
+    max-width: 400px; /* uzunluk */
+}
+
+    .nav-search input {
+        background: #1b1b1b;
+        border: 1px solid #2a2a2a;
         color: #fff;
+        width: 100%;
+        padding: .42rem .6rem;
     }
 
-        .dropdown-menu .dropdown-item:hover {
-            background: #333;
+        .nav-search input:focus {
+            outline: none;
+            border-color: #444;
+            box-shadow: none;
         }
 
-/* Formlar */
-.form-control {
-    color: #fff !important;
-    background: #222 !important;
+.navbar-nav {
+    margin-left: auto;
 }
 
-    .form-control::placeholder {
-        color: #aaa !important;
+/* Ana CTA */
+.btn-main {
+    background: var(--main-color);
+    color: #fff;
+    border: 0;
+}
+
+    .btn-main:hover {
+        filter: brightness(1.05);
     }
 
-/* Footer */
-.app-footer {
-    background: #000;
-    color: #bbb;
-    border-top: 1px solid #333;
-    padding: 12px 0;
-}
-.carousel-inner img {
-    height: 400px;
-    object-fit: cover;
-}
-/* Slider görsel oraný ve kapak efekti */
+/* ====== Slider ====== */
 .carousel-inner img {
     height: 420px;
     object-fit: cover;
@@ -120,43 +159,14 @@ hr {
     text-shadow: 0 2px 12px rgba(0,0,0,.6);
 }
 
-.carousel-item::after { /* alttan hafif gradient */
+.carousel-item::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0) 60%);
+    background: linear-gradient(to top,rgba(0,0,0,.55),rgba(0,0,0,0) 60%);
     pointer-events: none;
 }
 
-/* Bölüm baþlýðý – ince vurgu */
-.section-title {
-    display: inline-block;
-    margin: .25rem 0 1rem;
-    padding-bottom: .3rem;
-    border-bottom: 3px solid #dc3545;
-}
-
-/* Kart hover mikro etkileþim */
-.card {
-    transition: transform .2s ease, box-shadow .2s ease;
-    background: #121212;
-    border: 1px solid #1e1e1e;
-}
-
-    .card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 10px 24px rgba(0,0,0,.35);
-    }
-
-    /* Poster ve metin hizalarý */
-    .card img {
-        object-fit: cover;
-        height: 320px;
-    }
-
-    .card .card-body {
-        min-height: 150px;
-    }
 .carousel-caption h3 {
     font-weight: 700;
     font-size: 2rem;
@@ -165,19 +175,126 @@ hr {
 .carousel-caption p {
     font-size: 1.1rem;
 }
+
 .custom-caption-top {
     bottom: 35% !important;
 }
-.sticky-sidebar {
-    position: sticky;
-    top: 84px;
-}
-/* navbar altýnda sabit */
-.list-group-item {
-    border-color: #222;
+
+/* ====== Kartlar (film grid) ====== */
+.movie-grid .movie-card {
+    background: #1c1c1c;
+    border: 1px solid #1e1e1e;
+    color: #fff;
+    transition: transform .2s, box-shadow .2s;
+    height: 100%;
 }
 
-    .list-group-item.active {
-        background-color: #dc3545;
-        border-color: #dc3545;
+    .movie-grid .movie-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 24px rgba(0,0,0,.35);
     }
+
+/* Poster kutusu 2:3 oran */
+.poster-box {
+    width: 100%;
+    aspect-ratio: 2/3;
+    background: #0b0b0b;
+    overflow: hidden;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+
+    .poster-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+/* Anasayfada posterin tamamýný göster */
+.poster-contain img {
+    object-fit: contain;
+}
+
+.movie-card .card-body {
+    min-height: auto;
+}
+
+.movie-card .card-title {
+    font-size: .95rem;
+}
+
+.movie-grid > [class*="col-"] {
+    margin-bottom: 1.25rem;
+}
+
+/* Özet metni */
+.movie-summary {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+/* ====== Sidebar (lg+) ====== */
+@media (min-width:992px) {
+    .sidebar-rail {
+        position: absolute;
+        top: calc(var(--nav-h) + var(--rail-gap-y));
+        left: 0;
+        width: var(--sidebar-w);
+        background: #0f0f0f;
+        border-right: 1px solid #1e1e1e;
+        padding: 8px 0;
+    }
+
+    .has-sidebar-rail .content-wrap {
+        margin-left: 90px;
+    }
+}
+
+@media (max-width:991.98px) {
+    .sidebar-rail {
+        display: none;
+    }
+}
+
+.sidebar-rail .list-group {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-rail .list-group-item {
+    background: #0f0f0f;
+    color: #ddd;
+    border: 1px solid #1e1e1e;
+    border-left: 3px solid transparent;
+    padding: 10px 14px;
+}
+
+    .sidebar-rail .list-group-item:hover {
+        color: #fff;
+        background: #151515;
+        border-left-color: var(--main-color);
+    }
+
+    .sidebar-rail .list-group-item.active {
+        background: #151515 !important;
+        color: #fff !important;
+        border-left-color: #dc3545 !important;
+        border-color: #1e1e1e !important;
+    }
+
+/* ====== Ýçerik geniþlik ====== */
+.content-wrap {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.content-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+@media (min-width:1600px) {
+    .content-inner {
+        max-width: 1440px;
+    }
+}

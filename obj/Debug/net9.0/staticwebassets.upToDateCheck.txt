@@ -66,6 +66,7 @@ wwwroot\images\1.jpg
 wwwroot\images\2.jpg
 wwwroot\images\3.jpg
 wwwroot\images\4.jpg
+wwwroot\images\logo.png
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

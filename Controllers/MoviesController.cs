@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
-using MovixApp.Models; // Movie ve MovieResponse modellerin burada varsayılıyor
+using MovixApp.Models;            // Movie, MovieResponse
 using System.Text.Json;
 
 namespace MovixApp.Controllers
@@ -14,7 +14,7 @@ namespace MovixApp.Controllers
         // appsettings.json -> "TMDB": { "ApiKey": "..." }
         private string ApiKey => _cfg["TMDB:ApiKey"] ?? string.Empty;
 
-        // JSON: TMDB property adları ile model property adlarını case-insensitive eşle
+        // TMDB JSON'larını case-insensitive deserialize et
         private static readonly JsonSerializerOptions _jsonOpts =
             new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
 
@@ -25,9 +25,9 @@ namespace MovixApp.Controllers
             _cache = cache;
         }
 
-        // ------------ Helpers ------------------------------------------------
+        // -------------------- Helpers --------------------
 
-        // Genel GET yardımcı: 200 değilse default(T) döndürür (null)
+        // Genel GET helper: 200 değilse default(T)
         private async Task<T?> GetAsync<T>(string url)
         {
             var client = _http.CreateClient();
@@ -56,7 +56,7 @@ namespace MovixApp.Controllers
             return genres;
         }
 
-        // ------------ Actions -----------------------------------------------
+        // -------------------- Actions --------------------
 
         // ANA SAYFA: Popüler filmler
         public async Task<IActionResult> Index(int page = 1)
@@ -64,6 +64,7 @@ namespace MovixApp.Controllers
             if (string.IsNullOrWhiteSpace(ApiKey))
                 return Problem("TMDB API anahtarı bulunamadı. appsettings.json -> \"TMDB:ApiKey\"");
 
+            ViewBag.ShowSidebar = true;                 // <- sabit sidebar
             ViewBag.Genres = await GetGenresAsync();
 
             var resp = await GetAsync<MovieResponse>(
@@ -79,6 +80,9 @@ namespace MovixApp.Controllers
             if (string.IsNullOrWhiteSpace(ApiKey))
                 return Problem("TMDB API anahtarı bulunamadı.");
 
+            ViewBag.ShowSidebar = false; 
+            ViewBag.Genres = await GetGenresAsync();
+
             var movie = await GetAsync<Movie>(
                 $"https://api.themoviedb.org/3/movie/{id}?api_key={ApiKey}&language=tr-TR");
 
@@ -92,6 +96,7 @@ namespace MovixApp.Controllers
             if (string.IsNullOrWhiteSpace(ApiKey))
                 return Problem("TMDB API anahtarı bulunamadı.");
 
+            ViewBag.ShowSidebar = true;                 // <- sabit sidebar
             ViewBag.Genres = await GetGenresAsync();
             ViewBag.SelectedGenreId = id;
 
@@ -99,13 +104,15 @@ namespace MovixApp.Controllers
                 $"https://api.themoviedb.org/3/discover/movie?api_key={ApiKey}&language=tr-TR&with_genres={id}&page={page}&sort_by=popularity.desc");
 
             var list = resp?.Results ?? new List<Movie>();
-            return View("Search", list); // aynı kart görünümünü kullanıyorsan
+            // Kart layout'un aynıysa Search view'ını kullanmaya devam edebilirsin
+            return View("Search", list);
         }
 
         // ARAMA
         [HttpGet]
         public async Task<IActionResult> Search(string? q, int page = 1)
         {
+            ViewBag.ShowSidebar = true;                 // <- sabit sidebar
             ViewBag.Genres = await GetGenresAsync();
             ViewBag.Query = q ?? string.Empty;
 
@@ -116,14 +123,14 @@ namespace MovixApp.Controllers
                 return Problem("TMDB API anahtarı bulunamadı.");
 
             var resp = await GetAsync<MovieResponse>(
-                $"https://api.themoviedb.org/3/search/movie?api_key={ApiKey}&language=tr-TR&query={Uri.EscapeDataString(q)}&page={page}&include_adult=false");
+                $"https://api.themoviedb.org/3/search/movie?api_key={ApiKey}&language=tr-TR&query={Uri.EscapeDataString(q!)}&page={page}&include_adult=false");
 
             var list = resp?.Results ?? new List<Movie>();
             return View(list);
         }
 
         // NAVBAR canlı öneri (JSON)
-        [HttpGet("/api/search/suggest")]
+        [HttpGet("api/search/suggest")]
         public async Task<IActionResult> Suggest(string? q)
         {
             if (string.IsNullOrWhiteSpace(q) || q.Length < 2)
