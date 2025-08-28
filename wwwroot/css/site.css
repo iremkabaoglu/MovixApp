@@ -57,7 +57,7 @@ hr {
     background: #0f0f0f;
     border-bottom: 1px solid rgba(216,113,82,.45);
     transition: padding .2s ease, background .2s ease, box-shadow .2s ease;
-    padding-block: .55rem;
+    padding-block: .55rem; /* sabit yükseklik */
     margin-bottom: 0 !important;
 }
 
@@ -102,9 +102,9 @@ hr {
         background: var(--main-color);
     }
 
-/* Logo (büyük ve sola) */
+/* Logo (büyük olsun, ama navbar sabit kalsýn) */
 .logo-img {
-    height: 56px;
+    height: 45px; 
     width: auto;
     display: block;
 }
@@ -116,37 +116,122 @@ hr {
     gap: .5rem;
     flex: 1;
     margin-left: 100px;
-    max-width: 400px; /* uzunluk */
+    max-width: 400px;
 }
 
     .nav-search input {
-        background: #1b1b1b;
-        border: 1px solid #2a2a2a;
-        color: #fff;
+        background: #fff; /* Beyaz arkaplan */
+        border: 1px solid #ccc; /* Açýk gri kenar */
+        color: #000; /* Siyah yazý */
         width: 100%;
         padding: .42rem .6rem;
+        border-radius: 4px; /* Hafif yuvarlatýlmýþ köþe */
     }
 
+        /* Placeholder görünürlüðü */
+        .nav-search input::placeholder {
+            color: #666;
+            opacity: 1;
+        }
+
+        /* Focus (týklanýnca) efekti */
         .nav-search input:focus {
             outline: none;
-            border-color: #444;
-            box-shadow: none;
+            border-color: var(--main-color); /* Turuncu kenar */
+            box-shadow: 0 0 6px rgba(216,113,82,.5); /* Turuncu glow */
         }
+
 
 .navbar-nav {
     margin-left: auto;
 }
 
-/* Ana CTA */
+/* GHOST: Giriþ Yap */
+.btn-ghost {
+    /* Bootstrap btn deðiþkenleri — görünürlük garanti */
+    --bs-btn-color: #e7e7e7;
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: #2a2a2a;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #161616;
+    --bs-btn-hover-border-color: #444;
+    --bs-btn-focus-shadow-rgb: 216,113,82; /* turuncu aura */
+    --bs-btn-active-bg: #161616;
+    --bs-btn-active-border-color: #444;
+    color: var(--bs-btn-color);
+    background: var(--bs-btn-bg);
+    border: 1px solid var(--bs-btn-border-color);
+    border-radius: 999px;
+    padding: .38rem .9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    transition: background .2s, border-color .2s, color .2s, transform .08s;
+}
+
+    .btn-ghost:hover {
+        color: var(--bs-btn-hover-color);
+        background: var(--bs-btn-hover-bg);
+        border-color: var(--bs-btn-hover-border-color);
+    }
+
+    .btn-ghost:focus {
+        box-shadow: 0 0 0 3px rgba(var(--bs-btn-focus-shadow-rgb), .35);
+        outline: none;
+    }
+
+    .btn-ghost:active {
+        transform: translateY(1px);
+    }
+
+/* MAIN: Kayýt Ol */
 .btn-main {
-    background: var(--main-color);
-    color: #fff;
-    border: 0;
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--main-color);
+    --bs-btn-border-color: var(--main-color);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #cf5a38; /* bir týk koyusu */
+    --bs-btn-hover-border-color: #cf5a38;
+    --bs-btn-focus-shadow-rgb: 216,113,82;
+    color: var(--bs-btn-color);
+    background: var(--bs-btn-bg);
+    border: 1px solid var(--bs-btn-border-color);
+    border-radius: 999px;
+    padding: .38rem 1rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    transition: background .2s, filter .2s, box-shadow .2s, transform .08s;
 }
 
     .btn-main:hover {
-        filter: brightness(1.05);
+        background: var(--bs-btn-hover-bg);
+        border-color: var(--bs-btn-hover-border-color);
     }
+
+    .btn-main:focus {
+        box-shadow: 0 0 0 3px rgba(var(--bs-btn-focus-shadow-rgb), .35);
+        outline: none;
+    }
+
+    .btn-main:active {
+        transform: translateY(1px);
+    }
+
+/* Küçük boy */
+.btn-sm.btn-ghost, .btn-sm.btn-main {
+    padding: .32rem .8rem;
+    font-size: .875rem;
+}
+
+/* Butonlar arasý boþluk */
+.auth-actions {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+}
+
 
 /* ====== Slider ====== */
 .carousel-inner img {
@@ -298,3 +383,106 @@ hr {
         max-width: 1440px;
     }
 }
+/* Favoriler kartlarý */
+.fav-card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 14px;
+    overflow: hidden;
+    max-width: 160px; /* 180 -> 160: daha küçük */
+    margin: auto;
+    transition: transform .15s, box-shadow .15s, border-color .15s;
+}
+
+    .fav-card:hover {
+        transform: translateY(-2px);
+        border-color: #333;
+        box-shadow: 0 10px 20px rgba(0,0,0,.35);
+    }
+
+    /* Poster alaný */
+    .fav-card .poster {
+        position: relative;
+        aspect-ratio: 2/3;
+        background: #1b1b1b;
+        max-height: 200px;
+    }
+        /* 220 -> 200 */
+        .fav-card .poster img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+    .fav-card .poster-fallback {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        color: #bbb;
+        font-size: .75rem;
+        background: linear-gradient(180deg,#1c1c1c,#141414);
+    }
+
+    /* Puan rozeti */
+    .fav-card .rating-badge {
+        position: absolute;
+        top: .35rem;
+        right: .35rem;
+        background: rgba(0,0,0,.65);
+        padding: .18rem .38rem;
+        border-radius: 999px;
+        font-size: .68rem;
+        color: #fff;
+        border: 1px solid rgba(255,255,255,.12);
+        backdrop-filter: blur(4px);
+    }
+
+    /* Baþlýk þeridi */
+    .fav-card .titlebar {
+        font-weight: 600;
+        font-size: .78rem;
+        padding: .38rem .55rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border-top: 1px solid #1f1f1f;
+        background: #121212;
+    }
+
+    /* Aksiyonlar */
+    .fav-card .card-actions {
+        display: flex;
+        gap: .35rem;
+        font-size: .74rem;
+        padding: .25rem .5rem;
+        background: #121212;
+        border-top: 1px solid #1a1a1a;
+    }
+
+/* Ghost buton (küçük) */
+.btn-ghost {
+    --bs-btn-color: #e7e7e7;
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: #2a2a2a;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #161616;
+    --bs-btn-hover-border-color: #444;
+    color: var(--bs-btn-color);
+    background: var(--bs-btn-bg);
+    border: 1px solid var(--bs-btn-border-color);
+    border-radius: 999px;
+    padding: .24rem .6rem;
+    font-size: .78rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .2s, border-color .2s, color .2s, transform .08s;
+}
+
+    .btn-ghost:active {
+        transform: translateY(1px);
+    }

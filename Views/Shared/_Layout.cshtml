@@ -32,75 +32,99 @@
             <div class="row w-100">
                 <div class="col-2 d-flex align-items-center">
             <!-- SOL: LOGO -->
-            <a class="navbar-brand d-flex align-items-center" asp-controller="Movies" asp-action="Index" aria-label="Movix">
-                <!-- Logonun dosya adı sende farklıysa yolu güncelle -->
-                <img src="~/images/logo.png" alt="Movix" class="logo-img me-2" />
-                <span class="fw-bold d-none d-sm-inline">Movix</span>
-            </a>
+                    <a class="navbar-brand d-flex align-items-center" asp-controller="Movies" asp-action="Index" aria-label="Movix">
+                        <img src="~/images/logo.png" asp-append-version="true" alt="Movix" class="logo-img me-2" />
+                       
+                    </a>
+
             </div>
-                    <div class="col-6 d-flex justify-content-center">
+                <div class="col-6 d-flex justify-content-center"></div>
 
             <!-- ORTA: ARAMA (desktop) -->
             <form class="nav-search mx-auto d-none d-lg-flex" method="get"
-                  asp-controller="Movies" asp-action="Search" role="search" autocomplete="off">
-                <input id="navSearch" name="q" class="form-control form-control-sm"
-                       type="search" placeholder="Film ara..." aria-label="Ara" />
-                <button class="btn btn-sm btn-outline-danger" type="submit">Ara</button>
-
+                          asp-controller="Movies" asp-action="Search" role="search" autocomplete="off">
+                        <input id="navSearch" name="q" class="form-control form-control-sm"
+                               type="search" placeholder="Film ara..." aria-label="Ara" />
+                        <button class="btn btn-sm btn-main" type="submit">Ara</button>
                 <!-- Canlı öneri kutusu -->
                 <div id="navSuggest"
                      class="position-absolute rounded shadow bg-dark border border-secondary mt-5 d-none"
                      style="z-index:1000; min-width: 260px; max-height: 360px; overflow:auto;"></div>
             </form>
             </div>
-                        <div class="col-4 d-flex justify-content-end">
-            <!-- SAĞ: Menü + Auth -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             </div>
-            </div>
-            <div class="collapse navbar-collapse justify-content-end" id="navMain">
-                <ul class="navbar-nav align-items-lg-center nav-underline">
+            <div class="col-4 d-flex justify-content-end"></div>
+                    <!-- SAĞ: Menü + Auth -->
+                    <div class="collapse navbar-collapse justify-content-end" id="navMain">
+                        <ul class="navbar-nav align-items-lg-center auth-actions nav-underline">
 
-                    @if (SignInManager.IsSignedIn(User))
-                    {
-                        var user = await UserManager.GetUserAsync(User);
-                        var username = user != null ? await UserManager.GetUserNameAsync(user) : "";
-                        var shortName = !string.IsNullOrEmpty(username) && username.Contains("@")
-                        ? username.Split('@')[0] : username;
+                            @if (SignInManager.IsSignedIn(User))
+                            {
+                                var user = await UserManager.GetUserAsync(User);
+                                var username = user != null ? await UserManager.GetUserNameAsync(user) : "";
+                                var shortName = !string.IsNullOrEmpty(username) && username.Contains("@")
+                                ? username.Split('@')[0] : username;
 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#"
-                               id="userMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-person-circle"></i> @shortName
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" asp-controller="Profile" asp-action="Index">Profil</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li>
-                                    <form method="post" asp-area="Identity" asp-page="/Account/Logout"
-                                          asp-route-returnUrl="@Url.Action("Index","Movies")">
-                                        <button type="submit" class="dropdown-item">Çıkış Yap</button>
-                                    </form>
+                                <li class="nav-item dropdown">
+                                    <a class="btn btn-ghost btn-sm d-flex align-items-center gap-2"
+                                       href="#" id="userMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-person-circle"></i>
+                                        <span class="d-none d-sm-inline">@shortName</span>
+                                        <i class="bi bi-chevron-down small"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu dropdown-menu-end shadow">
+                                        <li>
+                                            <a class="dropdown-item" asp-controller="Profile" asp-action="Index">
+                                                <i class="bi bi-person"></i> Profil
+                                            </a>
+                                        </li>
+                            <li>
+                                <a class="dropdown-item" asp-controller="Favorites" asp-action="Index">
+                                    <i class="bi bi-heart"></i> Favorilerim
+                                </a>
+                            </li>
+
+                                        <li><hr class="dropdown-divider" /></li>
+                                        <li>
+                                            <form method="post" asp-area="Identity" asp-page="/Account/Logout"
+                                                  asp-route-returnUrl="@Url.Action("Index","Movies")">
+                                                <button type="submit" class="dropdown-item text-danger">
+                                                    <i class="bi bi-box-arrow-right"></i> Çıkış Yap
+                                                </button>
+                                            </form>
+                                        </li>
+                                    </ul>
                                 </li>
-                            </ul>
-                        </li>
-                    }
-                    else
-                    {
-                        <li class="nav-item"><a class="btn btn-sm btn-outline-light ms-lg-2" asp-area="Identity" asp-page="/Account/Login">Giriş Yap</a></li>
-                        <li class="nav-item"><a class="btn btn-sm btn-main ms-lg-2" asp-area="Identity" asp-page="/Account/Register">Kayıt Ol</a></li>
-                    }
-                </ul>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a class="btn btn-ghost btn-sm ms-lg-2"
+                                       asp-area="Identity" asp-page="/Account/Login">
+                                        <i class="bi bi-box-arrow-in-right me-1"></i>
+                                        <span class="d-none d-sm-inline">Giriş Yap</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="btn btn-main btn-sm ms-lg-2"
+                                       asp-area="Identity" asp-page="/Account/Register">
+                                        <i class="bi bi-person-plus me-1"></i>
+                                        <span class="d-none d-sm-inline">Kayıt Ol</span>
+                                    </a>
+                                </li>
+                            }
+                        </ul>
 
-                <!-- MOBİL: Arama -->
-                <form class="d-flex d-lg-none mt-2" method="get" asp-controller="Movies" asp-action="Search" role="search">
-                    <input class="form-control form-control-sm me-2" name="q" type="search" placeholder="Film ara..." />
-                    <button class="btn btn-sm btn-outline-danger" type="submit">Ara</button>
-                </form>
-            </div>
-        </div>
+                        <!-- MOBİL: Arama -->
+                        <form class="d-flex d-lg-none mt-2" method="get"
+                              asp-controller="Movies" asp-action="Search" role="search" autocomplete="off">
+                            <input class="form-control form-control-sm me-2" name="q"
+                                   type="search" placeholder="Film ara..." />
+                            <button class="btn btn-main btn-sm" type="submit">Ara</button>
+                        </form>
+                    </div>
+
     </nav>
 
     <!-- SOL MENÜ (lg+): sabit değil, sayfayla kayar -->

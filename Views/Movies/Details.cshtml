@@ -55,9 +55,25 @@
                 <a asp-controller="Movies" asp-action="Index" class="btn btn-outline-light btn-sm">
                     ← Listeye Dön
                 </a>
-                <button type="button" class="btn btn-main btn-sm" disabled title="Yakında">
-                    ❤️ Favorilere Ekle
-                </button>
+                @if (Model == null)
+                {
+                    <p>Film bulunamadı.</p>
+                }
+                else if (User?.Identity != null && User.Identity.IsAuthenticated)
+                {
+                    <form asp-controller="Favorites" asp-action="Add" method="post" class="d-inline">
+                        <input type="hidden" name="movieId" value="@Model!.Id" />
+                        <button type="submit" class="btn btn-main btn-sm">
+                            ❤️ Favorilere Ekle
+                        </button>
+                    </form>
+                }
+                else
+                {
+                    <a asp-area="Identity" asp-page="/Account/Login" class="btn btn-main btn-sm">
+                        ❤️ Favorilere Ekle (Giriş Yap)
+                    </a>
+                }
                 <button type="button" class="btn btn-outline-light btn-sm" disabled title="Yakında">
                     ✔️ İzledim
                 </button>

@@ -1,0 +1,51 @@
+﻿@model List<MovixApp.Models.Movie>
+
+<h2 class="mb-4">❤️ Favorilerim</h2>
+
+@if (Model == null || !Model.Any())
+{
+    <p>Henüz favoriniz yok.</p>
+}
+else
+{
+    <!-- daha sıkı bir grid -->
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-5 row-cols-lg-6 g-2">
+        @foreach (var m in Model)
+        {
+            var poster = string.IsNullOrEmpty(m.PosterPath)
+            ? null
+            : $"https://image.tmdb.org/t/p/w300{m.PosterPath}";  
+
+            <div class="col">
+                <div class="fav-card h-100">
+                    <div class="poster">
+                        @if (poster is not null)
+                        {
+                            <img src="@poster" alt="@m.Title" />
+                        }
+                        else
+                        {
+                            <div class="poster-fallback">Poster Yok</div>
+                        }
+
+                        <div class="rating-badge">⭐ @m.VoteAverage.ToString("0.0")</div>
+                        <a class="stretched-link"
+                           asp-controller="Movies" asp-action="Details" asp-route-id="@m.Id"></a>
+                    </div>
+
+                    <div class="titlebar" title="@m.Title">@m.Title</div>
+
+                    <div class="card-actions">
+                        <a asp-controller="Movies" asp-action="Details" asp-route-id="@m.Id"
+                           class="btn btn-ghost btn-sm flex-fill">Detay</a>
+
+                        <form asp-action="RemoveByMovie" method="post" class="flex-fill">
+                            <input type="hidden" name="movieId" value="@m.Id" />
+                            <button class="btn btn-danger btn-sm w-100">Kaldır</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
