@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
-using MovixApp.Models;            // Movie, MovieResponse
+using MovixApp.Models;            
 using System.Text.Json;
 
 namespace MovixApp.Controllers
@@ -11,10 +11,10 @@ namespace MovixApp.Controllers
         private readonly IConfiguration _cfg;
         private readonly IMemoryCache _cache;
 
-        // appsettings.json -> "TMDB": { "ApiKey": "..." }
+    
         private string ApiKey => _cfg["TMDB:ApiKey"] ?? string.Empty;
 
-        // TMDB JSON'larını case-insensitive deserialize et
+       
         private static readonly JsonSerializerOptions _jsonOpts =
             new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
 
@@ -96,7 +96,7 @@ namespace MovixApp.Controllers
             if (string.IsNullOrWhiteSpace(ApiKey))
                 return Problem("TMDB API anahtarı bulunamadı.");
 
-            ViewBag.ShowSidebar = true;                 // <- sabit sidebar
+            ViewBag.ShowSidebar = true;                 
             ViewBag.Genres = await GetGenresAsync();
             ViewBag.SelectedGenreId = id;
 
@@ -104,7 +104,7 @@ namespace MovixApp.Controllers
                 $"https://api.themoviedb.org/3/discover/movie?api_key={ApiKey}&language=tr-TR&with_genres={id}&page={page}&sort_by=popularity.desc");
 
             var list = resp?.Results ?? new List<Movie>();
-            // Kart layout'un aynıysa Search view'ını kullanmaya devam edebilirsin
+           
             return View("Search", list);
         }
 
@@ -112,7 +112,7 @@ namespace MovixApp.Controllers
         [HttpGet]
         public async Task<IActionResult> Search(string? q, int page = 1)
         {
-            ViewBag.ShowSidebar = true;                 // <- sabit sidebar
+            ViewBag.ShowSidebar = true;                
             ViewBag.Genres = await GetGenresAsync();
             ViewBag.Query = q ?? string.Empty;
 
@@ -163,7 +163,7 @@ namespace MovixApp.Controllers
         }
     }
 
-    // (İstersen bunları Models klasörüne taşı: Models/Genre.cs ve Models/GenreResponse.cs)
+    
     public class GenreResponse { public List<Genre> Genres { get; set; } = new(); }
     public class Genre { public int Id { get; set; } public string Name { get; set; } = string.Empty; }
 }

@@ -18,6 +18,14 @@
         },
         "runtime": {
           "MovixApp.dll": {}
+        },
+        "resources": {
+          "en/MovixApp.resources.dll": {
+            "locale": "en"
+          },
+          "tr/MovixApp.resources.dll": {
+            "locale": "tr"
+          }
         }
       },
       "Azure.Core/1.38.0": {

@@ -7,17 +7,17 @@ namespace MovixApp.Models
     public class Favorite
     {
         [Key]
-        public int Id { get; set; }   // Otomatik Primary Key
+        public int Id { get; set; }   
 
         [Required]
-        public string UserId { get; set; } = default!;  // Kullanıcı Id'si (AspNetUsers tablosundan)
+        public string UserId { get; set; } = default!; 
 
         [Required]
-        public int MovieId { get; set; }                // Favoriye eklenen film Id'si
+        public int MovieId { get; set; }                
 
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow; // Eklenme zamanı
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow; 
 
-        // 🔹 Navigation property (ilişki)
+        
         [ForeignKey("MovieId")]
         public Movie Movie { get; set; } = default!;
     }

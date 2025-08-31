@@ -14,12 +14,12 @@ namespace MovixApp.Models
         public string Overview { get; set; } = string.Empty;
 
         [JsonPropertyName("poster_path")]
-        public string? PosterPath { get; set; }  // <-- Null olabilir
+        public string? PosterPath { get; set; } 
 
         [JsonPropertyName("vote_average")]
         public double VoteAverage { get; set; }
 
-        // Tam poster URL'si
+        
         public string FullPosterPath
         {
             get

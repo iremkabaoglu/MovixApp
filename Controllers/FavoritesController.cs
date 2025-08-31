@@ -46,7 +46,7 @@ namespace MovixApp.Controllers
             return JsonSerializer.Deserialize<T>(json, _jsonOpts);
         }
 
-        // Favoriler listesi (Movie’leri TMDB’den çeker)
+        // Favoriler listesi 
         public async Task<IActionResult> Index()
         {
             var userId = _userManager.GetUserId(User)!;
@@ -70,7 +70,7 @@ namespace MovixApp.Controllers
             });
 
             var movies = (await Task.WhenAll(tasks)).Where(m => m != null)!.ToList();
-            return View(movies); // => Views/Favorites/Index.cshtml  (Model: List<Movie>)
+            return View(movies); 
         }
 
         // Favori ekle
@@ -87,7 +87,7 @@ namespace MovixApp.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // Favoriden kaldır (movieId ile – kullanıcıya göre siler)
+        // Favoriden kaldır 
         [HttpPost]
         public async Task<IActionResult> RemoveByMovie(int movieId)
         {

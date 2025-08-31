@@ -9,6 +9,12 @@
 }
 
 /* ====== Temel iskelet ====== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html, body {
     height: 100%;
 }
@@ -35,7 +41,6 @@ body {
     background: #000;
 }
 
-/* Reset */
 .container, .container-fluid, main, section, .card {
     background: transparent !important;
 }
@@ -57,12 +62,17 @@ hr {
     background: #0f0f0f;
     border-bottom: 1px solid rgba(216,113,82,.45);
     transition: padding .2s ease, background .2s ease, box-shadow .2s ease;
-    padding-block: .55rem; /* sabit yükseklik */
+    padding-block: .55rem;
     margin-bottom: 0 !important;
+    position: sticky;
+    top: 0;
+    z-index: 1060;
+    min-height: var(--nav-h);
 }
 
     .navbar-custom.navbar-shrink {
         padding-block: .35rem;
+        min-height: calc(var(--nav-h) - 12px);
         box-shadow: 0 6px 18px rgba(0,0,0,.25);
     }
 
@@ -102,62 +112,61 @@ hr {
         background: var(--main-color);
     }
 
-/* Logo (büyük olsun, ama navbar sabit kalsýn) */
+/* Logo */
 .logo-img {
-    height: 45px; 
+    height: 45px;
     width: auto;
     display: block;
 }
 
-/* Arama (ortada uzun) */
+/* Arama */
 .nav-search {
     position: relative;
     align-items: center;
     gap: .5rem;
     flex: 1;
-    margin-left: 100px;
     max-width: 400px;
 }
 
-    .nav-search input {
-        background: #fff; /* Beyaz arkaplan */
-        border: 1px solid #ccc; /* Açýk gri kenar */
-        color: #000; /* Siyah yazý */
-        width: 100%;
-        padding: .42rem .6rem;
-        border-radius: 4px; /* Hafif yuvarlatýlmýþ köþe */
+@media (min-width: 992px) {
+    .nav-search {
+        margin: 0 auto;
+    }
+}
+
+.nav-search input {
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #000;
+    width: 100%;
+    padding: .42rem .6rem;
+    border-radius: 4px;
+}
+
+    .nav-search input::placeholder {
+        color: #666;
+        opacity: 1;
     }
 
-        /* Placeholder görünürlüðü */
-        .nav-search input::placeholder {
-            color: #666;
-            opacity: 1;
-        }
-
-        /* Focus (týklanýnca) efekti */
-        .nav-search input:focus {
-            outline: none;
-            border-color: var(--main-color); /* Turuncu kenar */
-            box-shadow: 0 0 6px rgba(216,113,82,.5); /* Turuncu glow */
-        }
-
+    .nav-search input:focus {
+        outline: none;
+        border-color: var(--main-color);
+        box-shadow: 0 0 6px rgba(216,113,82,.5);
+    }
 
 .navbar-nav {
     margin-left: auto;
 }
 
-/* GHOST: Giriþ Yap */
+/* ====== Butonlar ====== */
 .btn-ghost {
-    /* Bootstrap btn deðiþkenleri — görünürlük garanti */
     --bs-btn-color: #e7e7e7;
     --bs-btn-bg: transparent;
     --bs-btn-border-color: #2a2a2a;
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: #161616;
     --bs-btn-hover-border-color: #444;
-    --bs-btn-focus-shadow-rgb: 216,113,82; /* turuncu aura */
-    --bs-btn-active-bg: #161616;
-    --bs-btn-active-border-color: #444;
+    --bs-btn-focus-shadow-rgb: 216,113,82;
     color: var(--bs-btn-color);
     background: var(--bs-btn-bg);
     border: 1px solid var(--bs-btn-border-color);
@@ -167,6 +176,7 @@ hr {
     align-items: center;
     gap: .4rem;
     transition: background .2s, border-color .2s, color .2s, transform .08s;
+    font-size: .875rem;
 }
 
     .btn-ghost:hover {
@@ -184,13 +194,12 @@ hr {
         transform: translateY(1px);
     }
 
-/* MAIN: Kayýt Ol */
 .btn-main {
     --bs-btn-color: #fff;
     --bs-btn-bg: var(--main-color);
     --bs-btn-border-color: var(--main-color);
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #cf5a38; /* bir týk koyusu */
+    --bs-btn-hover-bg: #cf5a38;
     --bs-btn-hover-border-color: #cf5a38;
     --bs-btn-focus-shadow-rgb: 216,113,82;
     color: var(--bs-btn-color);
@@ -203,6 +212,7 @@ hr {
     align-items: center;
     gap: .4rem;
     transition: background .2s, filter .2s, box-shadow .2s, transform .08s;
+    font-size: .9rem;
 }
 
     .btn-main:hover {
@@ -219,24 +229,25 @@ hr {
         transform: translateY(1px);
     }
 
-/* Küçük boy */
 .btn-sm.btn-ghost, .btn-sm.btn-main {
-    padding: .32rem .8rem;
-    font-size: .875rem;
+    padding: .24rem .8rem;
+    font-size: .78rem;
 }
 
-/* Butonlar arasý boþluk */
 .auth-actions {
     display: flex;
     gap: .75rem;
     align-items: center;
 }
 
-
 /* ====== Slider ====== */
 .carousel-inner img {
     height: 420px;
     object-fit: cover;
+}
+
+.carousel {
+    overflow: visible;
 }
 
 .carousel-caption {
@@ -292,12 +303,13 @@ hr {
     .poster-box img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
         display: block;
     }
-/* Anasayfada posterin tamamýný göster */
+
+/* --- Ana sayfa & diðer tüm sayfalar için poster-contain --- */
 .poster-contain img {
     object-fit: contain;
+    background: #0b0b0b;
 }
 
 .movie-card .card-body {
@@ -328,161 +340,76 @@ hr {
         background: #0f0f0f;
         border-right: 1px solid #1e1e1e;
         padding: 8px 0;
+        z-index: 1000;
     }
 
     .has-sidebar-rail .content-wrap {
-        margin-left: 90px;
-    }
-}
-
-@media (max-width:991.98px) {
-    .sidebar-rail {
-        display: none;
-    }
-}
-
-.sidebar-rail .list-group {
-    margin: 0;
-    padding: 0;
-}
-
-.sidebar-rail .list-group-item {
-    background: #0f0f0f;
-    color: #ddd;
-    border: 1px solid #1e1e1e;
-    border-left: 3px solid transparent;
-    padding: 10px 14px;
-}
-
-    .sidebar-rail .list-group-item:hover {
-        color: #fff;
-        background: #151515;
-        border-left-color: var(--main-color);
+        margin-left: 45px;
     }
 
-    .sidebar-rail .list-group-item.active {
-        background: #151515 !important;
-        color: #fff !important;
-        border-left-color: #dc3545 !important;
-        border-color: #1e1e1e !important;
+    .sidebar-rail .list-group {
+        margin: 0;
+        padding: 0;
     }
 
-/* ====== Ýçerik geniþlik ====== */
-.content-wrap {
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-.content-inner {
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
-@media (min-width:1600px) {
-    .content-inner {
-        max-width: 1440px;
-    }
-}
-/* Favoriler kartlarý */
-.fav-card {
-    background: #111;
-    border: 1px solid #222;
-    border-radius: 14px;
-    overflow: hidden;
-    max-width: 160px; /* 180 -> 160: daha küçük */
-    margin: auto;
-    transition: transform .15s, box-shadow .15s, border-color .15s;
-}
-
-    .fav-card:hover {
-        transform: translateY(-2px);
-        border-color: #333;
-        box-shadow: 0 10px 20px rgba(0,0,0,.35);
+    .sidebar-rail .list-group-item {
+        background: #0f0f0f;
+        color: #ddd;
+        border: 1px solid #1e1e1e;
+        border-left: 3px solid transparent;
+        padding: 10px 14px;
     }
 
-    /* Poster alaný */
-    .fav-card .poster {
-        position: relative;
-        aspect-ratio: 2/3;
-        background: #1b1b1b;
-        max-height: 200px;
-    }
-        /* 220 -> 200 */
-        .fav-card .poster img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
+        .sidebar-rail .list-group-item:hover {
+            color: #fff;
+            background: #151515;
+            border-left-color: var(--main-color);
         }
 
-    .fav-card .poster-fallback {
-        position: absolute;
-        inset: 0;
-        display: grid;
-        place-items: center;
-        color: #bbb;
-        font-size: .75rem;
-        background: linear-gradient(180deg,#1c1c1c,#141414);
+        .sidebar-rail .list-group-item.active {
+            background: #151515 !important;
+            color: #fff !important;
+            border-left-color: #dc3545 !important;
+            border-color: #1e1e1e !important;
+        }
+
+    .content-wrap {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
-    /* Puan rozeti */
-    .fav-card .rating-badge {
-        position: absolute;
-        top: .35rem;
-        right: .35rem;
-        background: rgba(0,0,0,.65);
-        padding: .18rem .38rem;
-        border-radius: 999px;
-        font-size: .68rem;
-        color: #fff;
-        border: 1px solid rgba(255,255,255,.12);
-        backdrop-filter: blur(4px);
+    .content-inner {
+        max-width: 1280px;
+        margin: 0 auto;
     }
 
-    /* Baþlýk þeridi */
-    .fav-card .titlebar {
-        font-weight: 600;
-        font-size: .78rem;
-        padding: .38rem .55rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        border-top: 1px solid #1f1f1f;
-        background: #121212;
+    @media (min-width:1600px) {
+        .content-inner {
+            max-width: 1440px;
+        }
     }
-
-    /* Aksiyonlar */
-    .fav-card .card-actions {
-        display: flex;
-        gap: .35rem;
-        font-size: .74rem;
-        padding: .25rem .5rem;
-        background: #121212;
-        border-top: 1px solid #1a1a1a;
-    }
-
-/* Ghost buton (küçük) */
-.btn-ghost {
-    --bs-btn-color: #e7e7e7;
-    --bs-btn-bg: transparent;
-    --bs-btn-border-color: #2a2a2a;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #161616;
-    --bs-btn-hover-border-color: #444;
-    color: var(--bs-btn-color);
-    background: var(--bs-btn-bg);
-    border: 1px solid var(--bs-btn-border-color);
-    border-radius: 999px;
-    padding: .24rem .6rem;
-    font-size: .78rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: background .2s, border-color .2s, color .2s, transform .08s;
 }
 
-    .btn-ghost:active {
-        transform: translateY(1px);
+.movies-grid-page .movie-card {
+    display: flex;
+    flex-direction: column;
+}
+
+    .movies-grid-page .movie-card .card-body {
+        display: flex;
+        flex-direction: column;
+        gap: .4rem;
+        min-height: 100px;
     }
+
+    .movies-grid-page .movie-card .meta {
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+.movies-grid-page .poster-box img {
+    object-fit: contain;
+    background: #0b0b0b;
+}

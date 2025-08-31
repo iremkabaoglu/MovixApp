@@ -1,21 +1,21 @@
-﻿@using MovixApp.Controllers  @* Genre sınıfı controller sonunda tanımlıysa *@
+﻿@using MovixApp.Controllers
 @{
     var genres = (IEnumerable<Genre>)(ViewBag.Genres ?? Enumerable.Empty<Genre>());
     int? selectedId = ViewBag.SelectedGenreId as int?;
 }
 
-<div class="list-group list-group-flush bg-transparent">
-    <a class="list-group-item list-group-item-action bg-transparent text-light"
+<div class="list-group genre-list  movies-grid-page">
+    <a class="list-group-item genre-item @(selectedId == null ? "active" : "")"
        asp-action="Index">
-        Tümü
+        🎬 Tümü
     </a>
 
     @foreach (var g in genres)
     {
         var active = (selectedId.HasValue && selectedId.Value == g.Id) ? "active" : "";
-        <a class="list-group-item list-group-item-action bg-transparent text-light d-flex justify-content-between align-items-center @active"
+        <a class="list-group-item genre-item @active"
            asp-action="ByGenre" asp-route-id="@g.Id">
-            <span>@g.Name</span>
+            @g.Name
         </a>
     }
 </div>

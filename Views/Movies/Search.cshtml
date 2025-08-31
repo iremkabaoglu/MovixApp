@@ -2,28 +2,37 @@
 @{
     ViewData["Title"] = "Arama Sonuçları";
 }
+
 <h3 class="mb-3">@ViewData["Title"]</h3>
-@if (!Model.Any())
+
+@if (!(Model?.Any() ?? false))
 {
     <div class="text-muted">Sonuç bulunamadı.</div>
 }
 else
 {
-    <div class="row g-4">
-        @foreach (var m in Model)
-        {
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card h-100">
-                    <img class="card-img-top"
-                         src="@(string.IsNullOrEmpty(m.PosterPath) ? "" : $"https://image.tmdb.org/t/p/w500{m.PosterPath}")"
-                         alt="@m.Title" onerror="this.style.display='none'" />
-                    <div class="card-body">
-                        <h6 class="card-title">@m.Title</h6>
-                        <p class="card-text small text-secondary">⭐ @m.VoteAverage</p>
-                        <a class="btn btn-sm btn-main" asp-action="Details" asp-route-id="@m.Id">Detaylar</a>
+    <div class="movies-grid-page">
+        <div class="row g-4">
+            @foreach (var m in Model)
+            {
+                var poster = string.IsNullOrEmpty(m.PosterPath)
+                ? Url.Content("~/images/no-poster.png")
+                : $"https://image.tmdb.org/t/p/w342{m.PosterPath}";
+
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card movie-card h-100">
+                        <div class="poster-box poster-contain">
+                            <img src="@poster" alt="@m.Title" />
+                        </div>
+
+                        <div class="card-body">
+                            <h6 class="card-title mb-1 text-truncate" title="@m.Title">@m.Title</h6>
+                            <div class="small">⭐ @m.VoteAverage</div>
+                            <a class="btn btn-sm btn-main mt-2" asp-action="Details" asp-route-id="@m.Id">Detaylar</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        }
+            }
+        </div>
     </div>
 }

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MovixApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c193ac8c159cdb6150ff1851c62f45cc78e371f1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a52e739d3e80dcac3228cce514fe6a26ee7aed9f")]
 [assembly: System.Reflection.AssemblyProductAttribute("MovixApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MovixApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
