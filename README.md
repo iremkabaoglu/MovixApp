@@ -47,6 +47,12 @@ Ayrıca giriş/kayıt sistemi ve favoriler özelliği de mevcuttur.
 
 ---
 
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
 ##  Kurulum
 
 ```bash
@@ -54,6 +60,4 @@ git clone https://github.com/iremkabaoglu/MovixApp.git
 cd MovixApp
 dotnet run
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
