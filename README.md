@@ -6,7 +6,7 @@ Ayrıca giriş/kayıt sistemi ve favoriler özelliği de mevcuttur.
 
 ---
 
-## 🚀 Özellikler
+##  Özellikler
 - Popüler filmleri listeleme
 - Türlere göre filtreleme (sidebar)
 - Arama
@@ -17,7 +17,7 @@ Ayrıca giriş/kayıt sistemi ve favoriler özelliği de mevcuttur.
 
 ---
 
-## 🖼️ Ekran Görüntüleri
+## Ekran Görüntüleri
 
 ### Anasayfa
 ![Home](screenshots/home.png)
@@ -34,12 +34,10 @@ Ayrıca giriş/kayıt sistemi ve favoriler özelliği de mevcuttur.
 ### Detay Sayfası
 ![Details](screenshots/details.png)
 
-> Not: `draw.png` geliştirici notları / diyagram için kullanılmıştır.  
-İstersen README’de ayrı bir **Diyagramlar** bölümünde gösterebilirsin.
 
 ---
 
-## 🛠️ Teknolojiler
+##  Teknolojiler
 - ASP.NET Core MVC
 - Bootstrap 5
 - Entity Framework Core
@@ -49,7 +47,7 @@ Ayrıca giriş/kayıt sistemi ve favoriler özelliği de mevcuttur.
 
 ---
 
-## 📦 Kurulum
+##  Kurulum
 
 ```bash
 git clone https://github.com/iremkabaoglu/MovixApp.git
